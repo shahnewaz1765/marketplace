@@ -7,11 +7,11 @@ import pic3 from "../assets/pic3.jpg";
 
 function Hero() {
   return (
-    <div className="carousel-container">
-      <Carousel>
+    <div className="carousel" style={{ maxWidth: "80%", maxHeight:"50%", margin: "auto" }}>
+      <Carousel >
         <Carousel.Item>
           <img
-            className="d-block w-100 "
+            className="d-block w-100"
             src={pic1}
             alt="First slide"
           />
@@ -19,7 +19,7 @@ function Hero() {
 
         <Carousel.Item>
           <img
-            className="d-block w-100 "
+            className="d-block w-100"
             src={pic2}
             alt="Second slide"
           />
