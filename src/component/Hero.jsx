@@ -7,8 +7,8 @@ import pic3 from "../assets/pic3.jpg";
 
 function Hero() {
   return (
-    <div className="carousel" style={{ maxWidth: "80%", maxHeight:"50%", margin: "auto" }}>
-      <Carousel >
+    <div className="carousel pb-5" style={{ maxWidth: "80%", maxHeight:"50%", margin: "auto" }}>
+      <Carousel indicators={false} >
         <Carousel.Item>
           <img
             className="d-block w-100"
