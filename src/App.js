@@ -5,6 +5,7 @@ import Navbar from "./component/Navbar";
 import Hero from "./component/Hero";
 import Trending from "./component/Trending";
 import ShopNow from "./component/ShopNow";
+import FlashHour from "./component/FlashHour";
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <Hero/>
       <ShopNow/>
       <Trending/>
+      <FlashHour/>
       
       
     </div>

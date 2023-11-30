@@ -1,0 +1,39 @@
+.image-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 200px; /* Adjust the height as desired */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay background color */
+    color: white;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .text-overlay h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .text-overlay button {
+    font-size: 14px;
+  }
+  
+  .image-container:hover .text-overlay {
+    opacity: 1;
+  }
+  

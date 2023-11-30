@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import shopnow1 from '../assets/shopnow1.jpg';
-import shopnow2 from '../assets/shopnow2.jpg';
-import shopnow3 from '../assets/shopnow3.jpg';
-import shopnow4 from '../assets/shopnow4.jpg';
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import shopnow1 from "../assets/shopnow1.jpg";
+import shopnow2 from "../assets/shopnow2.jpg";
+import shopnow3 from "../assets/shopnow3.jpg";
+import shopnow4 from "../assets/shopnow4.jpg";
 
 const shuffleArray = (array) => {
   const newArray = array.slice();
@@ -15,7 +15,10 @@ const shuffleArray = (array) => {
 };
 
 const ImageSection = ({ gender }) => {
-  const images = gender === 'men' ? shuffleArray([shopnow1, shopnow2]) : shuffleArray([shopnow3, shopnow4]);
+  const images =
+    gender === "men"
+      ? shuffleArray([shopnow1, shopnow2])
+      : shuffleArray([shopnow3, shopnow4]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const switchImage = () => {
@@ -27,54 +30,36 @@ const ImageSection = ({ gender }) => {
     return () => clearInterval(intervalId);
   }, []);
 
-  const cardStyle = {
-    height: '600px', // Set a fixed height for the Card
-    
-  };
-
   const imageStyle = {
-    maxHeight: '100%',
-    maxWidth: '100%',
-    objectFit: 'cover', // Maintain aspect ratio and fill container
+    height: "90%",
+    width: "100%",
+    objectFit: "cover", // Maintain aspect ratio and fill container
   };
 
   return (
-    <Card style={cardStyle} >
-      <div className="position-relative" style={{ height: '100%' }}>
-        <Card.Img
-          variant="top"
-          src={images[currentImageIndex]}
-          style={imageStyle}
-          
-        />
-      </div>
-      <Card.Body style={{ height: '0%' }}>
-        <Card.Title>{gender === 'men' ? 'Men' : 'Women'}</Card.Title>
-        <Card.Text>Image description.</Card.Text>
-        <Button href="#" variant="primary">
-          Read More
-        </Button>
-      </Card.Body>
-    </Card>
+    <div style={{ height: "100%" }}>
+      <img src={images[currentImageIndex]} style={imageStyle} />
+
+      <p></p>
+    </div>
   );
 };
 
 const ImageSections = () => {
   return (
-    <div className='shopnow'>
-    <Container >
-      <Row>
-        <Col md={6}>
-          <ImageSection gender="men" />
-        </Col>
-        <Col md={6}>
-          <ImageSection gender="women" />
-        </Col>
-      </Row>
-    </Container>
+    <div className="shopnow">
+      <Container>
+        <Row>
+          <Col md={6}>
+            <ImageSection gender="men" />
+          </Col>
+          <Col md={6}>
+            <ImageSection gender="women" />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
 
 export default ImageSections;
-

@@ -23,9 +23,10 @@ const ItemsList = () => {
   }
 
   return (
-    <div className="trending px-5 ">
+    <div className="trending px-40">
+      <h1 className="text-center">TRENDING</h1>
       
-      <Row xs={1} md={2} lg={3} className="g-4">
+      <Row xs={1} md={2} lg={4} className="g-4 pt-5">
         {data.record.map((item) => (
           <Col key={item.id}>
             <Card className="h-100 d-flex flex-column">
@@ -37,7 +38,7 @@ const ItemsList = () => {
             
               />
               </div>
-              <Card.Body>
+              <Card.Body style={{ fontSize: '14px'}}>
                 <Card.Title>{item.name}</Card.Title>
                 <Card.Text>Price: ${item.price}</Card.Text>
                 
