@@ -25,7 +25,7 @@ const FlashHour = () => {
           <div className="image-container">
             <img src={backpack} alt="Image 2" className="img-fluid" />
             <div className="text-overlay">
-              <h3>30% Discount</h3>
+              <h3>40% Discount</h3>
               <button className="btn btn-primary">More</button>
             </div>
           </div>
